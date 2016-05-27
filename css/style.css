@@ -1,6 +1,6 @@
 body
 {
-	background-color: black;
+	background-color: hsla(120, 0%, 10%, 1.0);
 }
 
 .page 
@@ -18,29 +18,98 @@ body
 {
 	width: 100%;
 	height: 100px;
-	background-color: red;
+	background-color: hsla(120, 0%, 15%, 1.0);
 }
 
 .nav
 {
 	width: 100%;
 	height: 50px;
-	background-color: green;
+	background-color: hsla(120, 0%, 25%, 1.0);
 	
 	flex-direction: row;
 	align-items: stretch;
+}
+
+.projects-nav
+{
+	width: 100%;
+	height: 50px;
+	background-color: hsla(120, 0%, 70%, 1.0);
 	
-	padding: 10px 0px 10px 0px;
+	flex-direction: row;
+	justify-content: center;
 }
 
 .main
 {
-	background-color: blue;
+	width: 100%;
+	height: auto;
+	background-color: hsla(120, 0%, 25%, 1.0);
+	
+	flex-wrap: wrap;
 }
+
+.content-view
+{
+	flex-grow: 1;
+	height: 300px;
+	
+    background-color: red;
+}
+
+.project-details
+{
+	flex-grow: 1;
+	height: 300px;
+	
+    background-color: blue;
+}
+
+.project-summary
+{
+	width: 100%;
+	height: 200px;
+	
+    background-color: orange;
+}
+
 .footer
 {
-	background-color: orange;
+	width: 100%;
+	height: 50px;
+	background-color: hsla(120, 0%, 15%, 1.0);
 }
+
+.nav-button
+{
+	height: 100%;
+	background-color: hsla(120, 0%, 50%, 1.0);
+	border: none;
+	padding: 10px 24px;
+	
+    cursor: pointer;
+	
+	transition-property: background-color;
+    transition-duration: 0.3s;
+}
+
+.nav-button:hover
+{
+	background-color: hsla(120, 0%, 100%, 1.0);
+}
+
+.projects-nav-button
+{
+	
+}
+
+.projects-nav-button:hover
+{
+	
+}
+
+
 
 .flex 
 {
@@ -51,26 +120,19 @@ body
 	display: flex;  
 }
 
-.nav-link
+.width-margin
 {
-		display:flex;
-	height: 100%;
-	background-color: white;
-	border: 1px solid red;
+	margin: 0px 10px 0px 10px;
 }
-
-.nav-link:link
+.height-padding
 {
-
+	padding: 10px 0px 10px 0px;
 }
-.nav-link:visited
+.height-margin
 {
-	background-color: purple;
+	margin: 10px 0px 10px 0px;
 }
-.nav-link:hover
+.box-margin
 {
-	background-color: blue;
-}
-.nav-link:active
-{
+	margin: 10px 10px 10px 10px;
 }
