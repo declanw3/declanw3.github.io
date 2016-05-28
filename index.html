@@ -3,15 +3,17 @@
 <head>
 	<meta charset="UTF-8"> 
 	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/populateProject.js"></script> 
 <body>
 	<div class="page flex">
 		<header class="header height-padding">header</header>
 		<nav class="nav flex height-padding">
 			<div>
-				<button href="" class="nav-button">Home</button>
+				<button href="" class="nav-button" onclick="DisplayView(0)">Home</button>
 			</div>
 			<div>
-				<button href="" class="nav-button">PROJECTS</button>
+				<button href="" class="nav-button" onclick="DisplayView(1)">PROJECTS</button>
 			</div>
 			<div>
 				<button href="" class="nav-button">LOL</button>
@@ -20,23 +22,36 @@
 				<button href="" class="nav-button">LOL</button>
 			</div>
 		</nav>
-		<main class="main flex height-padding">
-			<div class="projects-nav flex height-padding">
-				<div>
-					<button href="" class="projects-nav-button">Industry</button>
-				</div>
-				<div>
-					<button href="" class="projects-nav-button">Personal</button>
-				</div>
-				<div>
-					<button href="" class="projects-nav-button">Academic</button>
-				</div>
+		<main class="main flex height-padding" id="main">
+			<div class="home-view">
+				<h1>
+					DECLAN
+				</h1>
+				<p>
+					lorem ipsum your mum
+				</p>
 			</div>
-			<div class="content-view height-padding box-margin">
-			</div>
-			<div class="project-details height-padding box-margin">
-			</div>
-			<div class="project-summary height-padding width-margin">
+			<div class="project-view flex">
+				<div class="projects-nav flex height-padding">
+					<div>
+						<button href="" class="projects-nav-button">INDUSTRY</button>
+					</div>
+					<div>
+						<button href="" class="projects-nav-button">PERSONAL</button>
+					</div>
+					<div>
+						<button href="" class="projects-nav-button">ACADEMIC</button>
+					</div>
+				</div>
+				<div class="content-view flex height-padding box-margin">
+					<image class="content-image" src="assets/test.jpg">
+						
+					</image>
+				</div>
+				<div class="project-details height-padding box-margin">
+				</div>
+				<div class="project-summary height-padding width-margin">
+				</div>
 			</div>
 		</main>
 		<footer class="footer height-padding">footer</footer>
