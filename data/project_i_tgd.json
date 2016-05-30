@@ -1,5 +1,8 @@
 {
 	"Title": "The Good Dinosaur",
 	"Year": "2015",
-	"Environment": "Unity3D"
+	"Environment": "Unity3D",
+	"Language": "C#"
+	
+	"ImageSource": "assets/test.png"
 }
