@@ -1,4 +1,14 @@
 $(document).ready(function(){
+	// Initialise nav-buttons with button callbacks
+	$(".nav-button").on("click", function() {
+		OnNavButtonClicked($(this));
+    });
+	
+	// Initialise project-nav-buttons with button callbacks
+	$(".project-nav-button").on("click", function() {
+		OnProjectNavButtonClicked($(this));
+    });
+	
 	ViewState.MainViews().each(function(i) { 
 		$(this).hide();
 	});
@@ -12,12 +22,9 @@ $(document).ready(function(){
 			Data.SetProjectData(json);
 			console.log(json);
 			PopulateProjectView();
+			PopulateProjectNav();
 		}
 	});
-	
-	$(".nav-button").on("click", function() {
-		OnNavButtonClicked($(this));
-    });
 })
 
 var Data = (function(){
@@ -94,20 +101,6 @@ function FadeView(_viewIndex)
 	
 }
 
-function OnNavButtonClicked($_obj)
-{
-	var objIndex = $_obj.index();
-	var viewIndex = ViewState.GetView();
-	if(viewIndex != objIndex)
-	{
-		ViewState.MainViews().eq(viewIndex).fadeTo(400, 0.0, function() {
-			ViewState.MainViews().eq(viewIndex).hide();
-			DisplayView(objIndex);
-		});
-		ViewState.SetView(objIndex);
-	}
-}
-
 function PopulateProjectView()
 {
 	var typeIndex = ViewState.GetType();
@@ -126,4 +119,74 @@ function PopulateProjectView()
 		// Retrieve last element child
 		$(".project-body p").last().append(projectData.Overview[i]);
 	}
+}
+
+function PopulateProjectNav()
+{
+	var typeIndex = ViewState.GetType();
+	var projectIndex = ViewState.GetProject();
+	var typeData = Data.GetProjectData().projects[typeIndex];
+	
+	for(var i = 0; i < typeData.length; ++i)
+	{
+		$("<button>&#9898</button>").insertAfter(".project-side-nav-left-button").addClass("project-nav-button");
+	}
+	
+	// Set first project-nav-button as active
+	$(".project-nav").children().eq(1).addClass("active-nav");
+}
+
+Set
+
+function OnNavButtonClicked($_obj)
+{
+	var objIndex = $_obj.index();
+	var viewIndex = ViewState.GetView();
+	
+	// Check user is not already in current nav
+	if(viewIndex != objIndex)
+	{
+		// Fade out previous view
+		ViewState.MainViews().eq(viewIndex).fadeTo(400, 0.0, function() {
+			// Hide previous view (Prevent div space consumption)
+			ViewState.MainViews().eq(viewIndex).hide();
+			// Fade in current view
+			DisplayView(objIndex);
+		});
+		
+		// Remove active nav class from previous
+		$(".nav").children().eq(viewIndex).removeClass("active-nav");
+		// Add active nav class to current
+		$_obj.addClass("active-nav");
+		
+		ViewState.SetView(objIndex);
+		ViewState.SetProject(0);
+	}
+}
+
+function OnProjectNavButtonClicked($_obj)
+{
+	var objIndex = $_obj.index();
+	var projectIndex = ViewState.GetProject();
+	
+	// Check user is not already in current nav
+	if(projectIndex != objIndex)
+	{
+		// Fade out previous view
+		$(".project-content").fadeTo(400, 0.0, function() {
+			$(".project-content").fadeTo(400, 1.0);
+		});
+		
+		// Remove active nav class from previous
+		$(".project-nav").children().eq(projectIndex).removeClass("active-nav");
+		// Add active nav class to current
+		$_obj.addClass("active-nav");
+		
+		ViewState.SetProject(objIndex);
+	}
+}
+
+function OnProjectSideNavButtonClicked($_obj)
+{
+	
 }

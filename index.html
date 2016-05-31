@@ -8,9 +8,9 @@
 	<script type="text/javascript" src="js/populateProject.js"></script> 
 <body>
 	<div class="page flex">
-		<header class="header height-padding">header</header>
+		<header class="header height-padding height-margin">header</header>
 		<nav class="nav flex box-padding">
-			<button class="nav-button">HOME</button>
+			<button class="nav-button active-nav">HOME</button>
 			<button class="nav-button">PROJECTS</button>
 			<button class="nav-button">WORK EXPERIENCE</button>
 		</nav>
@@ -20,15 +20,17 @@
 				<p>lorem ipsum your mum</p>
 			</div>
 			<div class="project-view flex">
-				<div class="type-nav flex height-padding width-margin">
-					<button class="type-nav-button">INDUSTRY</button>
+				<div class="type-nav flex height-margin">
+					<button class="type-nav-button active-nav">INDUSTRY</button>
 					<button class="type-nav-button">PERSONAL</button>
 					<button class="type-nav-button">ACADEMIC</button>
 				</div>
-				<div class="project-content flex">
-					<div class="project-nav flex height-padding width-margin">
+				<div class="project-content flex height-padding">
+					<div class="project-nav flex">
+						<button class="project-side-nav-button project-side-nav-left-button">&lt</button>
+						<button class="project-side-nav-button project-side-nav-right-button">&gt</button>
 					</div>
-					<div class="project-media flex height-padding box-margin">
+					<div class="project-media flex box-padding box-margin">
 						<img class="project-image"></img>
 					</div>
 					<div class="project-details box-padding box-margin">
@@ -50,7 +52,7 @@
 				<h1>WORK</h1>
 			</div>
 		</main>
-		<footer class="footer height-padding">
+		<footer class="footer height-padding height-margin">
 			FOOOOOOOTER
 		</footer>
 	</div>
