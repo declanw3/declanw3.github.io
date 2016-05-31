@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Declan - Portfolio</title>
 	<meta charset="UTF-8"> 
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -8,11 +9,10 @@
 <body>
 	<div class="page flex">
 		<header class="header height-padding">header</header>
-		<nav class="nav flex height-padding">
-			<button class="nav-button">Home</button>
+		<nav class="nav flex box-padding">
+			<button class="nav-button">HOME</button>
 			<button class="nav-button">PROJECTS</button>
-			<button class="nav-button">LOL</button>
-			<button class="nav-button">LOL</button>
+			<button class="nav-button">WORK EXPERIENCE</button>
 		</nav>
 		<main class="main flex height-padding" id="main">
 			<div class="home-view">
@@ -20,31 +20,39 @@
 				<p>lorem ipsum your mum</p>
 			</div>
 			<div class="project-view flex">
-				<div class="project-nav flex height-padding">
-					<button href="" class="projects-nav-button">INDUSTRY</button>
-					<button href="" class="projects-nav-button">PERSONAL</button>
-					<button href="" class="projects-nav-button">ACADEMIC</button>
+				<div class="type-nav flex height-padding width-margin">
+					<button class="type-nav-button">INDUSTRY</button>
+					<button class="type-nav-button">PERSONAL</button>
+					<button class="type-nav-button">ACADEMIC</button>
 				</div>
 				<div class="project-content flex">
+					<div class="project-nav flex height-padding width-margin">
+					</div>
 					<div class="project-media flex height-padding box-margin">
-						<image class="project-image" src="assets/test.jpg">
-							
-						</image>
+						<img class="project-image"></img>
 					</div>
 					<div class="project-details box-padding box-margin">
 						<h1>
-							<span class="Title">TEST</span>
+							<span class="project-title"></span> 
+							(<span class="project-year"></span>)
 						</h1>
 						<p>
-							Year: <span class="Year"></span>
+							Environment:
+							<span class="project-environment"></span>
+							(<span class="project-languages"></span>)
 						</p>
 					</div>
-					<div class="project-summary height-padding width-margin">
+					<div class="project-body box-padding width-margin">
 					</div>
 				</div>
 			</div>
+			<div class="work-experience-view">
+				<h1>WORK</h1>
+			</div>
 		</main>
-		<footer class="footer height-padding">footer</footer>
+		<footer class="footer height-padding">
+			FOOOOOOOTER
+		</footer>
 	</div>
 </body>
 </html>

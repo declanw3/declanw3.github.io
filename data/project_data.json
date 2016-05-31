@@ -1,0 +1,27 @@
+{
+	"projects": 
+	[
+		[
+			{
+				"Title": "The Good Dinosaur",
+				"Year": "2015",
+				"Environment": "Unity3D",
+				"Languages": "C#",
+				
+				"Overview":
+				[
+					"A 3 month game development project consisting of a team of developers, artists and designers. This project was in collaboration with Disney – the final output consisting of a production quality game in correspondence with ‘The Good Dinosaur (Disney, 2016)’ movie.",
+					"Proceeding into the standard milestones of development, the initial design criteria allowed the inception of key elements with flexibility to change direction. Adopting agile and Scrum methodologies, the team was able to plan, groom and produce while still having the versatility to respond to various requests.",
+					"The final delivery was of great success with positive reception and feedback; a rewarding experience with further industry prospect."
+				],
+		
+				"ImageSource": "http://a2.mzstatic.com/nz/r30/Purple69/v4/7d/5a/14/7d5a1459-8902-56ec-b7d3-ba443132cae5/screen322x572.jpeg"
+			}
+		],
+		[
+			{
+				"ok": "OK"
+			}
+		]
+	]
+}
