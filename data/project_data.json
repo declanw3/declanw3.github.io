@@ -11,39 +11,75 @@
 				"Overview":
 				[
 					"A 3 month game development project consisting of a team of developers, artists and designers. This project was in collaboration with Disney – the final output consisting of a production quality game in correspondence with ‘The Good Dinosaur (Disney, 2016)’ movie.",
-					"Proceeding into the standard milestones of development, the initial design criteria allowed the inception of key elements with flexibility to change direction. Adopting agile and Scrum methodologies, the team was able to plan, groom and produce while still having the versatility to respond to various requests.",
-					"The final delivery was of great success with positive reception and feedback; a rewarding experience with further industry prospect."
+					"Adopting agile and Scrum methodologies, the team was able to plan, groom and produce while still having the versatility to respond to various requests. Accompanying the fundamental game elements, considerations for optimisation, balance/design, and testing allowed for a stable build throughout production.",
+					"The final delivery was of great success with positive reception and feedback; a challenging and rewarding experience alongside an enjoyable product."
 				],
 		
 				"ImageSource": "http://a2.mzstatic.com/nz/r30/Purple69/v4/7d/5a/14/7d5a1459-8902-56ec-b7d3-ba443132cae5/screen322x572.jpeg"
 			},
 			{
-				"Title": "Industry2"
-			},
-			{
-				"Title": "Industry3"
+				"Title": "Title",				
+				"Year": "Year",
+				"Environment": "Environment",
+				"Languages": "Languages",
+				
+				"Overview":
+				[
+					"Overview1",
+					"Overview2",
+					"Overview3"
+				],
+		
+				"ImageSource": "assets/test.jpg"
 			}
 		],
 		[
 			{
-				"Title": "Personal1"
-			},
-			{
-				"Title": "Personal2"
-			},
-			{
-				"Title": "Personal3"
+				"Title": "Title",				
+				"Year": "Year",
+				"Environment": "Environment",
+				"Languages": "Languages",
+				
+				"Overview":
+				[
+					"Overview1",
+					"Overview2",
+					"Overview3"
+				],
+		
+				"ImageSource": "assets/test.jpg"
 			}
 		],
 		[
 			{
-				"Title": "Academic1"
+				"Title": "Title",				
+				"Year": "Year",
+				"Environment": "Environment",
+				"Languages": "Languages",
+				
+				"Overview":
+				[
+					"Overview1",
+					"Overview2",
+					"Overview3"
+				],
+		
+				"ImageSource": "assets/test.jpg"
 			},
 			{
-				"Title": "Academic2"
-			},
-			{
-				"Title": "Academic3"
+				"Title": "Title",				
+				"Year": "Year",
+				"Environment": "Environment",
+				"Languages": "Languages",
+				
+				"Overview":
+				[
+					"Overview1",
+					"Overview2",
+					"Overview3"
+				],
+		
+				"ImageSource": "assets/test.jpg"
 			}
 		]
 	]

@@ -1,14 +1,4 @@
-$(document).ready(function(){
-	// Initialise nav-buttons with button callbacks
-	$(".nav-button").on("click", function() {
-		OnNavButtonClicked($(this));
-    });
-	
-	// Initialise project-nav-buttons with button callbacks
-	$(".project-nav-button").on("click", function() {
-		OnProjectNavButtonClicked($(this));
-    });
-	
+$(document).ready(function(){	
 	ViewState.MainViews().each(function(i) { 
 		$(this).hide();
 	});
@@ -21,8 +11,14 @@ $(document).ready(function(){
 		success: function(json) {
 			Data.SetProjectData(json);
 			console.log(json);
+			
 			PopulateProjectView();
 			PopulateProjectNav();
+			
+			PopulateNavButtonCallbacks();
+			PopulateTypeNavButtonCallbacks();
+			PopulateProjectNavButtonCallbacks();
+			PopulateProjectSideNavButtonCallbacks();
 		}
 	});
 })
@@ -86,19 +82,9 @@ var ViewState = (function(){
 	return view; 	// Expose externally
 }());
 	
-function ChangeView()
-{
-	FadeView(ViewState.GetView());
-}
-
 function DisplayView(_viewIndex)
 {
 	ViewState.MainViews().eq(_viewIndex).fadeTo(400, 1.0);
-}
-
-function FadeView(_viewIndex)
-{
-	
 }
 
 function PopulateProjectView()
@@ -108,16 +94,25 @@ function PopulateProjectView()
 	var projectData = Data.GetProjectData().projects[typeIndex][projectIndex];
 	
 	$(".project-image").attr("src", projectData.ImageSource);
+	
+	$(".project-title").empty();
 	$(".project-title").append(projectData.Title);
+	
+	$(".project-year").empty();
 	$(".project-year").append(projectData.Year);
+	
+	$(".project-environment").empty();
 	$(".project-environment").append(projectData.Environment);
+	
+	$(".project-languages").empty();
 	$(".project-languages").append(projectData.Languages);
 	
+	$(".project-summary").empty();
 	for(var i = 0; i < projectData.Overview.length; ++i)
 	{
-		$(".project-body").append("<p></p>");
+		$(".project-summary").append("<p></p>");
 		// Retrieve last element child
-		$(".project-body p").last().append(projectData.Overview[i]);
+		$(".project-summary p").last().append(projectData.Overview[i]);
 	}
 }
 
@@ -129,64 +124,157 @@ function PopulateProjectNav()
 	
 	for(var i = 0; i < typeData.length; ++i)
 	{
-		$("<button>&#9898</button>").insertAfter(".project-side-nav-left-button").addClass("project-nav-button");
+		$(".project-nav").append("<button>&#9898</button>");
+		$(".project-nav").children().last().addClass("project-nav-button");
 	}
 	
 	// Set first project-nav-button as active
-	$(".project-nav").children().eq(1).addClass("active-nav");
+	$(".project-nav").children().eq(0).addClass("active-nav");
 }
 
-Set
-
-function OnNavButtonClicked($_obj)
+function PopulateNavButtonCallbacks()
 {
-	var objIndex = $_obj.index();
+	// Initialise nav-buttons with button callbacks
+	$(".nav-button").on("click", function() {
+		OnNavButtonClicked($(this));
+	});
+	// Set 0th element as active
+	$(".type-nav").children().first().addClass("active-nav");
+}
+
+function PopulateTypeNavButtonCallbacks()
+{
+	// Initialise type-nav-buttons with button callbacks
+	$(".type-nav-button").on("click", function() {
+		OnTypeNavButtonClicked($(this));
+	});
+}
+
+function PopulateProjectNavButtonCallbacks()
+{
+	// Initialise project-nav-buttons with button callbacks
+	$(".project-nav-button").on("click", function() {
+		OnProjectNavButtonClicked($(this));
+	});
+}
+
+function PopulateProjectSideNavButtonCallbacks()
+{
+	// Initialise project-side-nav-buttons with button callbacks
+	$(".project-side-nav-button").on("click", function() {
+		OnProjectSideNavButtonClicked($(this));
+	});
+}
+
+function OnNavButtonClicked($_button)
+{
+	var buttonIndex = $_button.index();
 	var viewIndex = ViewState.GetView();
 	
 	// Check user is not already in current nav
-	if(viewIndex != objIndex)
+	if(viewIndex != buttonIndex)
 	{
+		// Stop all animations (Currently used to terminate .fadeTo, may affect others)
+		ViewState.MainViews().eq(viewIndex).stop();
+		
 		// Fade out previous view
 		ViewState.MainViews().eq(viewIndex).fadeTo(400, 0.0, function() {
 			// Hide previous view (Prevent div space consumption)
 			ViewState.MainViews().eq(viewIndex).hide();
 			// Fade in current view
-			DisplayView(objIndex);
+			DisplayView(buttonIndex);
 		});
 		
 		// Remove active nav class from previous
 		$(".nav").children().eq(viewIndex).removeClass("active-nav");
 		// Add active nav class to current
-		$_obj.addClass("active-nav");
+		$_button.addClass("active-nav");
 		
-		ViewState.SetView(objIndex);
+		ViewState.SetView(buttonIndex);
 		ViewState.SetProject(0);
 	}
 }
 
-function OnProjectNavButtonClicked($_obj)
+function OnTypeNavButtonClicked($_button)
 {
-	var objIndex = $_obj.index();
+	var buttonIndex = $_button.index();
+	var typeIndex = ViewState.GetType();
+	
+	// Check user is not already in current nav
+	if(typeIndex != buttonIndex)
+	{
+		// Stop all animations (Currently used to terminate .fadeTo, may affect others)
+		$(".project-body").stop();
+		
+		// Fade out previous view
+		$(".project-body").fadeTo(400, 0.0, function() {
+			PopulateProjectView();
+			
+			// Resize project-nav for differences in length
+			$(".project-nav").empty();
+			PopulateProjectNav();
+			// Repopulate project-nav-button callbacks (lost on removal)
+			PopulateProjectNavButtonCallbacks();
+		
+			$(".project-body").fadeTo(400, 1.0);
+		});
+		
+		// Remove active nav class from previous
+		$(".type-nav").children().eq(typeIndex).removeClass("active-nav");
+		// Add active nav class to current
+		$_button.addClass("active-nav");
+		
+		ViewState.SetType(buttonIndex);
+		ViewState.SetProject(0);
+	}
+}
+
+function OnProjectNavButtonClicked($_button)
+{
+	var buttonIndex = $_button.index();
 	var projectIndex = ViewState.GetProject();
 	
 	// Check user is not already in current nav
-	if(projectIndex != objIndex)
+	if(projectIndex != buttonIndex)
 	{
+		// Stop all animations (Currently used to terminate .fadeTo, may affect others)
+		$(".project-content").stop();
+		
 		// Fade out previous view
 		$(".project-content").fadeTo(400, 0.0, function() {
+			PopulateProjectView();
 			$(".project-content").fadeTo(400, 1.0);
 		});
 		
 		// Remove active nav class from previous
 		$(".project-nav").children().eq(projectIndex).removeClass("active-nav");
 		// Add active nav class to current
-		$_obj.addClass("active-nav");
+		$_button.addClass("active-nav");
 		
-		ViewState.SetProject(objIndex);
+		ViewState.SetProject(buttonIndex);
 	}
 }
 
-function OnProjectSideNavButtonClicked($_obj)
+function OnProjectSideNavButtonClicked($_button)
 {
+	var newProjectIndex = ViewState.GetProject();
+	if($_button.hasClass("project-side-nav-right-button"))
+	{
+		++newProjectIndex;
+		if(newProjectIndex >= $(".project-nav").children().length)
+		{
+			newProjectIndex = 0;
+		}
+	}
+	else
+	{
+		--newProjectIndex;
+		if(newProjectIndex < 0)
+		{
+			newProjectIndex = $(".project-nav").children().length - 1;
+		}
+	}
 	
+	// Simulate "Click" on appropriate project-nav-button
+	$(".project-nav").children().eq(newProjectIndex).trigger("click");
 }
