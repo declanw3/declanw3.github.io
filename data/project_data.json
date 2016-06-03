@@ -30,7 +30,7 @@
 					"Overview3"
 				],
 		
-				"ImageSource": "assets/test.jpg"
+				"ImageSource": "assets/images/test.jpg"
 			}
 		],
 		[
@@ -47,7 +47,7 @@
 					"Overview3"
 				],
 		
-				"ImageSource": "assets/test.jpg"
+				"ImageSource": "assets/images/test.jpg"
 			}
 		],
 		[
@@ -64,7 +64,7 @@
 					"Overview3"
 				],
 		
-				"ImageSource": "assets/test.jpg"
+				"ImageSource": "assets/images/test.jpg"
 			},
 			{
 				"Title": "Title",				
@@ -79,7 +79,7 @@
 					"Overview3"
 				],
 		
-				"ImageSource": "assets/test.jpg"
+				"ImageSource": "assets/images/test.jpg"
 			}
 		]
 	]

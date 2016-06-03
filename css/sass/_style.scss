@@ -1,16 +1,23 @@
-html 
+@import "compass/css3/flexbox";
+@import "compass/css3/images";
+@import "compass/css3/transition";
+
+$page-color: hsla(210, 0%, 0%, 0.8);
+$core-color: hsla(200, 0%, 40%, 0.9);
+$nav-color: hsla(200, 0%, 20%, 0.5);
+$project-content-color: hsla(200, 0%, 30%, 0.6);
+$project-component-color: hsla(210, 0%, 0%, 0.7);
+$button-color: hsla(200, 0%, 40%, 0.6);
+$button-hover-color: hsla(120, 0%, 100%, 1.0);
+
+html
 {
   overflow-y: scroll;
 }
 
 body
 {
-	background: red; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(left top, red, red, yellow); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(bottom right, red, red, yellow); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(bottom right, red, red, yellow); /* For Firefox 3.6 to 15 */
-
- 	background: linear-gradient(135deg, /* Standard syntax */
+ 	@include background(linear-gradient(135deg, /* Standard syntax */
 	hsla(240, 100%, 0%, 1.0) 0%, hsla(240, 100%, 0%, 1.0) 10%,		/* Black 	*/
 	hsla(200, 100%, 10%, 1.0) 35%, hsla(200, 100%, 10%, 1.0) 35%, 	/* Blue 1	*/
 	hsla(240, 100%, 0%, 1.0) 35%, hsla(240, 100%, 0%, 1.0) 36%,		/* Black 	*/
@@ -24,7 +31,7 @@ body
 	hsla(240, 100%, 0%, 1.0) 57%, hsla(240, 100%, 0%, 1.0) 58%,		/* Black 	*/
 	hsla(200, 100%, 50%, 1.0) 58%, hsla(200, 100%, 50%, 1.0) 59%,	/* Blue 6	*/
 	hsla(240, 100%, 0%, 1.0) 84%, hsla(240, 100%, 0%, 1.0) 90%,		/* Black 	*/
-	hsla(240, 100%, 0%, 1.0) 90%, hsla(240, 100%, 0%, 1.0) 100%);
+	hsla(240, 100%, 0%, 1.0) 90%, hsla(240, 100%, 0%, 1.0) 100%));
 	
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -37,10 +44,9 @@ body
 	height: 100%;
 	margin: auto;
 	
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
+	@include flex-flow(row wrap);
 	
-	background-color: hsla(210, 0%, 0%, 0.8);
+	background-color: $page-color;
 }
 
 .header
@@ -48,7 +54,7 @@ body
 	width: 100%;
 	height: 100px;
 	
-	background-color: hsla(200, 0%, 40%, 0.9);
+	background-color: $core-color;
 }
 
 .nav
@@ -56,10 +62,10 @@ body
 	width: 100%;
 	height: auto;
 	
-	flex-direction: row;
-	align-items: stretch;
+	@include flex-direction(row);
+	@include align-items(stretch);
 	
-	background-color: hsla(200, 0%, 20%, 0.5);
+	background-color: $nav-color;
 }
 
 .main
@@ -67,7 +73,7 @@ body
 	width: 100%;
 	height: auto;
 	
-	flex-wrap: wrap;
+	@include flex-wrap(wrap);
 }
 
 .footer
@@ -75,39 +81,38 @@ body
 	width: 100%;
 	height: 50px;
 	
-	background-color: hsla(200, 0%, 40%, 0.9);
+	background-color: $core-color;
 }
 
 .home-view
 {
-	flex: 1;
+	@include flex(1);
 	
-	background-color: hsla(200, 0%, 40%, 0.9);
+	background-color: $core-color;
 }
 
 .project-view
 {
-	flex: 1;
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
+	@include flex(1);
+	@include flex-flow(row wrap);
 
-	background-color: hsla(200, 0%, 20%, 0.5);
+	background-color: $nav-color;
 }
 
 .profile-view
 {
-	flex: 1;
+	@include flex(1);
 	
-	background-color: hsla(200, 0%, 40%, 0.9);
+	background-color: $core-color;
 }
 
 .type-nav
 {
 	height: auto;
 	
-	flex: 1;
-	flex-direction: row;
-	justify-content: center;
+	@include flex(1);
+	@include flex-direction(row);
+	@include justify-content(center);
 }
 
 .project-nav-wrapper
@@ -115,8 +120,8 @@ body
 	width: 100%;
 	height: auto;
 	
-	flex-direction: row;
-	justify-content: space-between;
+	@include flex-direction(row);
+	@include justify-content(space-between);
 }
 
 .project-nav
@@ -124,35 +129,33 @@ body
 	width: auto;
 	height: auto;
 	
-	flex-direction: row;
-	justify-content: center;
+	@include flex-direction(row);
+	@include justify-content(center);
 }
 
 .project-body
 {
-	flex-direction: row;
-	flex-wrap: wrap;
-	
 	height: auto;
+	
+	@include flex-flow(row wrap);
 }
 
 .project-content
 {
-	flex: 1;
-	flex-direction: row;
-	flex-wrap: wrap;
+	@include flex(1);
+	@include flex-flow(row wrap);
 	
-	background-color: hsla(200, 0%, 30%, 0.6);
+	background-color: $project-content-color;
 }
 
 .project-media
 {
 	height: 300px;
 	
-	flex: 1;
-	justify-content: center;
+	@include flex(1);
+	@include justify-content(center);
 	
-	background-color: hsla(210, 0%, 0%, 0.7);
+	background-color: $project-component-color;
 }
 
 .project-image
@@ -164,10 +167,11 @@ body
 
 .project-details
 {
-	flex: 1;
 	height: 300px;
 	
-	background-color: hsla(210, 0%, 0%, 0.7);
+	@include flex(1);
+	
+	background-color: $project-component-color;
 }
 .project-details p, .project-details h1
 {
@@ -179,7 +183,7 @@ body
 	width: 100%;
 	height: auto;
 	
-	background-color: hsla(210, 0%, 0%, 0.7);
+	background-color: $project-component-color;
 }
 .project-summary p
 {
@@ -198,15 +202,15 @@ body
 	padding: 10px 24px;
     cursor: pointer;
 	
-	background-color: hsla(200, 0%, 40%, 0.9);
+	background-color: $button-color;
 	
-	transition-property: background-color;
-    transition-duration: 0.3s;
+	@include transition-property(background-color);
+    @include transition-duration(0.3s);
 }
 
 .nav-button:hover, .nav-button.active-nav
 {
-	background-color: hsla(120, 0%, 100%, 1.0);
+	background-color: $button-hover-color;
 }
 
 .type-nav-button
@@ -218,15 +222,15 @@ body
 	line-height: 50%;
     cursor: pointer;
 	
-	background-color: hsla(200, 0%, 40%, 0.6);
+	background-color: $button-color;
 	
-	transition-property: background-color;
-    transition-duration: 0.3s;
+	@include transition-property(background-color);
+    @include transition-duration(0.3s);
 }
 
 .type-nav-button:hover, .type-nav-button.active-nav
 {
-	background-color: hsla(120, 0%, 100%, 1.0);
+	background-color: $button-hover-color;
 }
 
 .project-nav-button
@@ -238,15 +242,15 @@ body
 	line-height: 50%;
     cursor: pointer;
 	
-	background-color: hsla(200, 0%, 40%, 0.6);
+	background-color: $button-color;
 	
-	transition-property: background-color;
-    transition-duration: 0.3s;
+	@include transition-property(background-color);
+    @include transition-duration(0.3s);
 }
 
 .project-nav-button:hover, .project-nav-button.active-nav
 {
-	background-color: hsla(120, 0%, 100%, 1.0);
+	background-color: $button-hover-color;
 }
 
 .project-side-nav-button
@@ -258,15 +262,15 @@ body
 	line-height: 50%;
     cursor: pointer;
 	
-	background-color: hsla(200, 0%, 40%, 0.6);
+	background-color: $button-color;
 	
-	transition-property: background-color;
-    transition-duration: 0.3s;
+	@include transition-property(background-color);
+    @include transition-duration(0.3s);
 }
 
 .project-side-nav-button:hover
 {
-	background-color: hsla(120, 0%, 100%, 1.0);
+	background-color: $button-hover-color;
 }
 
 
@@ -274,11 +278,7 @@ body
 
 .flex 
 {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;  
+	@include display-flex(flex);
 }
 
 .height-padding
