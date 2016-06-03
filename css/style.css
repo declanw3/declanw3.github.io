@@ -40,14 +40,15 @@ body
 	-webkit-flex-flow: row wrap;
 	flex-flow: row wrap;
 	
-	background-color: hsla(240, 0%, 0%, 0.5);
+	background-color: hsla(210, 0%, 0%, 0.8);
 }
 
 .header
 {
 	width: 100%;
 	height: 100px;
-	background-color: hsla(120, 0%, 15%, 1.0);
+	
+	background-color: hsla(200, 0%, 40%, 0.9);
 }
 
 .nav
@@ -58,37 +59,46 @@ body
 	flex-direction: row;
 	align-items: stretch;
 	
-	background-color: hsla(210, 30%, 10%, 0.5);
+	background-color: hsla(200, 0%, 20%, 0.5);
 }
 
 .main
 {
 	width: 100%;
 	height: auto;
-	background-color: hsla(120, 0%, 0%, 0.5);
 	
 	flex-wrap: wrap;
+}
+
+.footer
+{
+	width: 100%;
+	height: 50px;
+	
+	background-color: hsla(200, 0%, 40%, 0.9);
 }
 
 .home-view
 {
 	flex: 1;
-	background-color: hsla(120, 0%, 35%, 1.0);
+	
+	background-color: hsla(200, 0%, 40%, 0.9);
 }
 
 .project-view
 {
 	flex: 1;
-	flex-direction: column;
-	flex-wrap: wrap;
-	
-	background-color: hsla(120, 0%, 0%, 0.5);
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+
+	background-color: hsla(200, 0%, 20%, 0.5);
 }
 
-.work-view
+.profile-view
 {
 	flex: 1;
-	background-color: hsla(120, 0%, 35%, 1.0);
+	
+	background-color: hsla(200, 0%, 40%, 0.9);
 }
 
 .type-nav
@@ -98,8 +108,6 @@ body
 	flex: 1;
 	flex-direction: row;
 	justify-content: center;
-
-	background-color: hsla(210, 30%, 20%, 0.5);
 }
 
 .project-nav-wrapper
@@ -109,8 +117,6 @@ body
 	
 	flex-direction: row;
 	justify-content: space-between;
-	
-	background-color: hsla(210, 30%, 30%, 0.5);
 }
 
 .project-nav
@@ -128,8 +134,6 @@ body
 	flex-wrap: wrap;
 	
 	height: auto;
-	
-	background-color: hsla(120, 0%, 0%, 0.5);
 }
 
 .project-content
@@ -138,7 +142,7 @@ body
 	flex-direction: row;
 	flex-wrap: wrap;
 	
-	background-color: hsla(210, 30%, 40%, 0.5);
+	background-color: hsla(200, 0%, 40%, 0.75);
 }
 
 .project-media
@@ -187,13 +191,6 @@ body
     text-align: justify;
 }
 
-.footer
-{
-	width: 100%;
-	height: 50px;
-	background-color: hsla(120, 0%, 15%, 1.0);
-}
-
 .nav-button
 {
 	height: 100%;
@@ -201,7 +198,7 @@ body
 	padding: 10px 24px;
     cursor: pointer;
 	
-	background-color: hsla(210, 30%, 50%, 0.5);
+	background-color: hsla(200, 0%, 40%, 0.9);
 	
 	transition-property: background-color;
     transition-duration: 0.3s;
@@ -221,7 +218,7 @@ body
 	line-height: 50%;
     cursor: pointer;
 	
-	background-color: hsla(210, 20%, 50%, 0.4);
+	background-color: hsla(200, 0%, 40%, 0.5);
 	
 	transition-property: background-color;
     transition-duration: 0.3s;
@@ -241,7 +238,7 @@ body
 	line-height: 50%;
     cursor: pointer;
 	
-	background-color: hsla(210, 20%, 50%, 0.4);
+	background-color: hsla(200, 0%, 40%, 0.5);
 	
 	transition-property: background-color;
     transition-duration: 0.3s;
@@ -261,7 +258,7 @@ body
 	line-height: 50%;
     cursor: pointer;
 	
-	background-color: hsla(210, 20%, 50%, 0.4);
+	background-color: hsla(200, 0%, 40%, 0.5);
 	
 	transition-property: background-color;
     transition-duration: 0.3s;
