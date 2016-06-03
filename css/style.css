@@ -5,7 +5,29 @@ html
 
 body
 {
-	background-color: hsla(120, 0%, 10%, 1.0);
+	background: red; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, red, red, yellow); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, red, red, yellow); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, red, red, yellow); /* For Firefox 3.6 to 15 */
+
+ 	background: linear-gradient(135deg, /* Standard syntax */
+	hsla(240, 100%, 0%, 1.0) 0%, hsla(240, 100%, 0%, 1.0) 10%,		/* Black 	*/
+	hsla(200, 100%, 10%, 1.0) 35%, hsla(200, 100%, 10%, 1.0) 35%, 	/* Blue 1	*/
+	hsla(240, 100%, 0%, 1.0) 35%, hsla(240, 100%, 0%, 1.0) 36%,		/* Black 	*/
+	hsla(200, 100%, 20%, 1.0) 36%, hsla(200, 100%, 20%, 1.0) 46%,	/* Blue 2	*/
+	hsla(240, 100%, 0%, 1.0) 46%, hsla(240, 100%, 0%, 1.0) 47%,		/* Black 	*/
+	hsla(200, 100%, 30%, 1.0) 47%, hsla(200, 100%, 30%, 1.0) 52%,	/* Blue 3	*/
+	hsla(240, 100%, 0%, 1.0) 52%, hsla(240, 100%, 0%, 1.0) 53%,		/* Black 	*/
+	hsla(200, 100%, 40%, 1.0) 53%, hsla(200, 100%, 40%, 1.0) 55%,	/* Blue 4	*/
+	hsla(240, 100%, 0%, 1.0) 55%, hsla(240, 100%, 0%, 1.0) 56%,		/* Black 	*/
+	hsla(200, 100%, 60%, 1.0) 56%, hsla(200, 100%, 60%, 1.0) 57%,	/* Blue 5	*/
+	hsla(240, 100%, 0%, 1.0) 57%, hsla(240, 100%, 0%, 1.0) 58%,		/* Black 	*/
+	hsla(200, 100%, 50%, 1.0) 58%, hsla(200, 100%, 50%, 1.0) 59%,	/* Blue 6	*/
+	hsla(240, 100%, 0%, 1.0) 70%, hsla(240, 100%, 0%, 1.0) 90%,		/* Black 	*/
+	hsla(240, 100%, 0%, 1.0) 90%, hsla(240, 100%, 0%, 1.0) 100%);
+	
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .page 
@@ -14,9 +36,11 @@ body
 	width: 900px;
 	height: 100%;
 	margin: auto;
-
+	
 	-webkit-flex-flow: row wrap;
 	flex-flow: row wrap;
+	
+	background-color: hsla(240, 0%, 0%, 0.5);
 }
 
 .header
@@ -30,17 +54,18 @@ body
 {
 	width: 100%;
 	height: auto;
-	background-color: hsla(120, 0%, 30%, 1.0);
 	
 	flex-direction: row;
 	align-items: stretch;
+	
+	background-color: hsla(210, 30%, 10%, 0.5);
 }
 
 .main
 {
 	width: 100%;
 	height: auto;
-	background-color: hsla(120, 0%, 15%, 1.0);
+	background-color: hsla(120, 0%, 0%, 0.5);
 	
 	flex-wrap: wrap;
 }
@@ -57,7 +82,7 @@ body
 	flex-direction: column;
 	flex-wrap: wrap;
 	
-	background-color: hsla(120, 0%, 35%, 1.0);
+	background-color: hsla(120, 0%, 0%, 0.5);
 }
 
 .work-view
@@ -73,8 +98,8 @@ body
 	flex: 1;
 	flex-direction: row;
 	justify-content: center;
-	
-	background-color: hsla(120, 0%, 35%, 1.0);
+
+	background-color: hsla(210, 30%, 20%, 0.5);
 }
 
 .project-nav-wrapper
@@ -83,20 +108,18 @@ body
 	height: auto;
 	
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-between;
 	
-	background-color: hsla(120, 0%, 40%, 1.0);
+	background-color: hsla(210, 30%, 30%, 0.5);
 }
 
 .project-nav
 {
-	width: 100%;
+	width: auto;
 	height: auto;
 	
 	flex-direction: row;
 	justify-content: center;
-	
-	background-color: hsla(120, 0%, 40%, 1.0);
 }
 
 .project-body
@@ -106,7 +129,7 @@ body
 	
 	height: auto;
 	
-	background-color: hsla(120, 0%, 40%, 1.0);;
+	background-color: hsla(120, 0%, 0%, 0.5);
 }
 
 .project-content
@@ -115,16 +138,17 @@ body
 	flex-direction: row;
 	flex-wrap: wrap;
 	
-	background-color: hsla(120, 0%, 50%, 1.0);;
+	background-color: hsla(210, 30%, 40%, 0.5);
 }
 
 .project-media
 {
-	flex: 1;
 	height: 300px;
-	background-color: black;
 	
+	flex: 1;
 	justify-content: center;
+	
+	background-color: hsla(210, 0%, 0%, 0.6);
 }
 
 .project-image
@@ -139,7 +163,11 @@ body
 	flex: 1;
 	height: 300px;
 	
-	background-color: hsla(120, 0%, 30%, 1.0);
+	background-color: hsla(210, 0%, 0%, 0.6);
+}
+.project-details p, .project-details h1
+{
+	color: grey;
 }
 
 .project-summary
@@ -147,7 +175,11 @@ body
 	width: 100%;
 	height: auto;
 	
-	background-color: hsla(120, 0%, 30%, 1.0);
+	background-color: hsla(210, 0%, 0%, 0.6);
+}
+.project-summary p
+{
+	color: grey;
 }
 
 .project-summary p
@@ -165,11 +197,11 @@ body
 .nav-button
 {
 	height: 100%;
-	background-color: hsla(120, 0%, 45%, 1.0);
 	border: none;
 	padding: 10px 24px;
-	
     cursor: pointer;
+	
+	background-color: hsla(210, 30%, 50%, 0.5);
 	
 	transition-property: background-color;
     transition-duration: 0.3s;
@@ -183,12 +215,13 @@ body
 .type-nav-button
 {
 	height: 100%;
-	background-color: hsla(120, 0%, 70%, 1.0);
 	border: none;
 	padding: 10px 24px;
-	line-height: 50%;
 	
+	line-height: 50%;
     cursor: pointer;
+	
+	background-color: hsla(210, 20%, 50%, 0.4);
 	
 	transition-property: background-color;
     transition-duration: 0.3s;
@@ -202,12 +235,13 @@ body
 .project-nav-button
 {
 	height: 100%;
-	background-color: hsla(120, 0%, 70%, 1.0);
 	border: none;
 	padding: 10px;
-	line-height: 50%;
 	
+	line-height: 50%;
     cursor: pointer;
+	
+	background-color: hsla(210, 20%, 50%, 0.4);
 	
 	transition-property: background-color;
     transition-duration: 0.3s;
@@ -221,12 +255,13 @@ body
 .project-side-nav-button
 {
 	height: 100%;
-	background-color: hsla(120, 0%, 70%, 1.0);
 	border: none;
 	padding: 10px;
-	line-height: 50%;
 	
+	line-height: 50%;
     cursor: pointer;
+	
+	background-color: hsla(210, 20%, 50%, 0.4);
 	
 	transition-property: background-color;
     transition-duration: 0.3s;
