@@ -17,7 +17,7 @@ html
 
 body
 {
-	min-height: 100%;
+	height: 100%;
 	
  	@include background(linear-gradient(135deg, /* Standard syntax */
 	hsla(240, 100%, 0%, 1.0) 0%, hsla(240, 100%, 0%, 1.0) 10%,		/* Black 	*/
@@ -195,7 +195,6 @@ body
 .project-summary p
 {
     text-align: justify;
-	white-space: nowrap;
 }
 
 .nav-button
