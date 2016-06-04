@@ -12,11 +12,13 @@ $button-hover-color: hsla(120, 0%, 100%, 1.0);
 
 html
 {
-  overflow-y: scroll;
+	overflow-y: scroll;
 }
 
 body
 {
+	min-height: 100%;
+	
  	@include background(linear-gradient(135deg, /* Standard syntax */
 	hsla(240, 100%, 0%, 1.0) 0%, hsla(240, 100%, 0%, 1.0) 10%,		/* Black 	*/
 	hsla(200, 100%, 10%, 1.0) 35%, hsla(200, 100%, 10%, 1.0) 35%, 	/* Blue 1	*/
@@ -193,6 +195,7 @@ body
 .project-summary p
 {
     text-align: justify;
+	white-space: nowrap;
 }
 
 .nav-button
