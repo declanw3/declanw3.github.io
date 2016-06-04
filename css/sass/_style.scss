@@ -16,9 +16,7 @@ html
 }
 
 body
-{
-	height: 100%;
-	
+{	
  	@include background(linear-gradient(135deg, /* Standard syntax */
 	hsla(240, 100%, 0%, 1.0) 0%, hsla(240, 100%, 0%, 1.0) 10%,		/* Black 	*/
 	hsla(200, 100%, 10%, 1.0) 35%, hsla(200, 100%, 10%, 1.0) 35%, 	/* Blue 1	*/
@@ -37,6 +35,7 @@ body
 	
     background-repeat: no-repeat;
     background-attachment: fixed;
+	background-size: cover;
 }
 
 .page 
@@ -194,6 +193,8 @@ body
 
 .project-summary p
 {
+	width: 100%;
+	
     text-align: justify;
 }
 
