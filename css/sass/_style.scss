@@ -20,27 +20,15 @@ html
 
 body
 {		
- 	@include background(linear-gradient(135deg, /* Standard syntax */
-	hsla(240, 100%, 0%, 1.0) 0%, hsla(240, 100%, 0%, 1.0) 10%,		/* Black 	*/
-	hsla(200, 100%, 10%, 1.0) 35%, hsla(200, 100%, 10%, 1.0) 35%, 	/* Blue 1	*/
-	hsla(240, 100%, 0%, 1.0) 35%, hsla(240, 100%, 0%, 1.0) 36%,		/* Black 	*/
-	hsla(200, 100%, 20%, 1.0) 36%, hsla(200, 100%, 20%, 1.0) 46%,	/* Blue 2	*/
-	hsla(240, 100%, 0%, 1.0) 46%, hsla(240, 100%, 0%, 1.0) 47%,		/* Black 	*/
-	hsla(200, 100%, 30%, 1.0) 47%, hsla(200, 100%, 30%, 1.0) 52%,	/* Blue 3	*/
-	hsla(240, 100%, 0%, 1.0) 52%, hsla(240, 100%, 0%, 1.0) 53%,		/* Black 	*/
-	hsla(200, 100%, 40%, 1.0) 53%, hsla(200, 100%, 40%, 1.0) 55%,	/* Blue 4	*/
-	hsla(240, 100%, 0%, 1.0) 55%, hsla(240, 100%, 0%, 1.0) 56%,		/* Black 	*/
-	hsla(200, 100%, 60%, 1.0) 56%, hsla(200, 100%, 60%, 1.0) 57%,	/* Blue 5	*/
-	hsla(240, 100%, 0%, 1.0) 57%, hsla(240, 100%, 0%, 1.0) 58%,		/* Black 	*/
-	hsla(200, 100%, 50%, 1.0) 58%, hsla(200, 100%, 50%, 1.0) 59%,	/* Blue 6	*/
-	hsla(240, 100%, 0%, 1.0) 84%, hsla(240, 100%, 0%, 1.0) 90%,		/* Black 	*/
-	hsla(240, 100%, 0%, 1.0) 90%, hsla(240, 100%, 0%, 1.0) 100%));
-	
+	background-color: black;
+
     background-repeat: no-repeat;
     background-attachment: fixed;
+	
+	font-family: calibri;
 }
 
-.page 
+.page
 {  
 	min-width: 900px;
 	width: 900px;
@@ -58,30 +46,40 @@ body
 	height: auto;
 	
  	@include background(linear-gradient(135deg, /* Standard syntax */
-	hsla(200, 100%, 20%, 1.0) 0%, hsla(200, 100%, 20%, 1.0) 10%,		/* Black 	*/
-	hsla(200, 100%, 50%, 1.0) 50%, hsla(200, 100%, 50%, 1.0) 50%, 	/* Blue 1	*/
-	hsla(240, 100%, 0%, 1.0) 50%, hsla(240, 100%, 0%, 1.0) 51%,		/* Black 	*/
-	hsla(200, 100%, 20%, 1.0) 51%, hsla(200, 100%, 20%, 1.0) 61%,	/* Blue 2	*/
-	hsla(240, 100%, 0%, 1.0) 61%, hsla(240, 100%, 0%, 1.0) 62%,		/* Black 	*/
-	hsla(240, 100%, 0%, 1.0) 90%, hsla(240, 100%, 0%, 1.0) 100%));
+	hsla(200, 100%, 0%, 1.0) 0%, hsla(200, 100%, 0%, 1.0) 0%,		/* Black 	*/
+	hsla(200, 100%, 10%, 1.0) 0%, hsla(200, 100%, 10%, 1.0) 70%, 		/* Blue 1	*/
+	hsla(240, 100%, 0%, 1.0) 70%, hsla(240, 100%, 0%, 1.0) 71%,		/* Black 	*/
+	hsla(200, 100%, 20%, 1.0) 71%, hsla(200, 100%, 20%, 1.0) 81%,	/* Blue 2	*/
+	hsla(240, 100%, 0%, 1.0) 81%, hsla(240, 100%, 0%, 1.0) 82%,		/* Black 	*/
+	hsla(200, 100%, 50%, 1.0) 82%, hsla(200, 100%, 50%, 1.0) 85%,	/* Blue 3	*/
+	hsla(240, 100%, 0%, 1.0) 85%, hsla(240, 100%, 0%, 1.0) 86%,		/* Black 	*/
+	hsla(240, 100%, 100%, 1.0) 86%, hsla(240, 100%, 100%, 1.0) 87%,		/* Black 	*/
+	hsla(240, 100%, 0%, 1.0) 87%, hsla(240, 100%, 0%, 1.0) 88%,		/* Black 	*/
+	hsla(240, 100%, 2%, 1.0) 88%, hsla(240, 100%, 2%, 1.0) 100%)		/* Black 	*/);
 }
 
-.header-overlay
-{	
-	height: 100%;
+.header-overlay1
+{		
+	height: auto;
 	
 	@include flex(1);
 	
-	border-color: blue;
-	border-style: solid solid none solid;
+ 	@include background(linear-gradient(135deg, /* Standard syntax */
+	hsla(200, 100%, 0%, 1.0) 0%, hsla(200, 100%, 0%, 1.0) 0%,		/* Black 	*/
+	hsla(200, 100%, 100%, 1.0) 0%, hsla(200, 100%, 100%, 1.0) 50%, 		/* Blue 1	*/
+	hsla(240, 100%, 0%, 1.0) 50%, hsla(240, 100%, 0%, 1.0) 51%,		/* Black 	*/
+	hsla(200, 100%, 0%, 0.5) 51%, hsla(200, 100%, 0%, 0.5) 100%));
 }
 
 .header-main
 {	
+    text-shadow: 2px 2px $header-color;
 }
 
 .header-sub
 {	
+	color: $core-color;
+    text-shadow: 1px 1px $header-color;
 }
 
 .nav
@@ -106,9 +104,19 @@ body
 .footer
 {
 	width: 100%;
-	height: 50px;
+	height: auto;
 	
-	background-color: $header-color;
+ 	@include background(linear-gradient(135deg, /* Standard syntax */
+	hsla(200, 100%, 0%, 1.0) 0%, hsla(200, 100%, 0%, 1.0) 0%,		/* Black 	*/
+	hsla(200, 100%, 10%, 1.0) 0%, hsla(200, 100%, 10%, 1.0) 70%, 		/* Blue 1	*/
+	hsla(240, 100%, 0%, 1.0) 70%, hsla(240, 100%, 0%, 1.0) 71%,		/* Black 	*/
+	hsla(200, 100%, 20%, 1.0) 71%, hsla(200, 100%, 20%, 1.0) 81%,	/* Blue 2	*/
+	hsla(240, 100%, 0%, 1.0) 81%, hsla(240, 100%, 0%, 1.0) 82%,		/* Black 	*/
+	hsla(200, 100%, 50%, 1.0) 82%, hsla(200, 100%, 50%, 1.0) 85%,	/* Blue 3	*/
+	hsla(240, 100%, 0%, 1.0) 85%, hsla(240, 100%, 0%, 1.0) 86%,		/* Black 	*/
+	hsla(240, 100%, 100%, 1.0) 86%, hsla(240, 100%, 100%, 1.0) 87%,		/* Black 	*/
+	hsla(240, 100%, 0%, 1.0) 87%, hsla(240, 100%, 0%, 1.0) 88%,		/* Black 	*/
+	hsla(240, 100%, 2%, 1.0) 88%, hsla(240, 100%, 2%, 1.0) 100%)		/* Black 	*/);
 }
 
 .home-view
@@ -339,6 +347,10 @@ body
 	float: right;
 }
 
+.work-summary
+{
+	text-align: justify;
+}
 
 
 
