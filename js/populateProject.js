@@ -10,7 +10,6 @@ $(document).ready(function(){
 		dataType: "json",
 		success: function(json) {
 			Data.SetProjectData(json);
-			console.log(json);
 			
 			PopulateProjectView();
 			PopulateProjectNav();
@@ -21,10 +20,23 @@ $(document).ready(function(){
 			PopulateProjectSideNavButtonCallbacks();
 		}
 	});
+	
+	$.ajax({
+		url: "data/profile_data.json",
+		contentType: "application/json;",
+		dataType: "json",
+		success: function(json) {
+			Data.SetProfileData(json);
+			console.log(json);
+			
+			PopulateProfileView();
+		}
+	});
 })
 
 var Data = (function(){
 	var projectData;
+	var profileData;
 	
 	var data = {};	// Public object - returned at end of module
 	
@@ -34,6 +46,14 @@ var Data = (function(){
 	
 	data.GetProjectData = function(){
 		return projectData;
+	}
+	
+	data.SetProfileData = function(_profileData){
+		profileData = _profileData;
+	}
+	
+	data.GetProfileData = function(){
+		return profileData;
 	}
 	
 	return data;	// Expose externally
@@ -98,6 +118,9 @@ function PopulateProjectView()
 	$(".project-title").empty();
 	$(".project-title").append(projectData.Title);
 	
+	$(".project-company").empty();
+	$(".project-company").append(projectData.Company);
+	
 	$(".project-year").empty();
 	$(".project-year").append(projectData.Year);
 	
@@ -130,6 +153,25 @@ function PopulateProjectNav()
 	
 	// Set first project-nav-button as active
 	$(".project-nav").children().eq(0).addClass("active-nav");
+}
+
+function PopulateProfileView()
+{
+	var profileData = Data.GetProfileData();
+	
+	// Create HTML work entries dynamically
+	for(var i = 0; i < profileData.work_entries.length - 1; ++i)
+	{
+		$(".work-entry").first().clone().appendTo(".work-entry-wrapper");
+	}
+	
+	for(var i = 0; i < profileData.work_entries.length; ++i)
+	{
+		$(".work-entry-wrapper").children().eq(i).find(".work-role").append(profileData.work_entries[i].Role);
+		$(".work-entry-wrapper").children().eq(i).find(".work-company").append(profileData.work_entries[i].Company);
+		$(".work-entry-wrapper").children().eq(i).find(".work-duration").append(profileData.work_entries[i].Duration);
+		$(".work-entry-wrapper").children().eq(i).find(".work-summary").append(profileData.work_entries[i].Summary);
+	}
 }
 
 function PopulateNavButtonCallbacks()

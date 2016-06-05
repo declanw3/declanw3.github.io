@@ -1,0 +1,26 @@
+{
+	"work_entries":
+	[
+		{
+			"Role": "Game Developer",
+			"Company": "CerebralFix",
+			"Duration": "2015-2016",
+			
+			"Summary": "Participating as a member of various teams to deliver either external game development projects and/or internal game development projects. Contributing to development code base with input in requirements, design, and structure. Flexibility to respond to key stakeholder and product owner feedback. Regular attendance of Scrum meetings, ticket groomings and retrospectives focusing on project goals and deliveries. Additional responsibilities include bug fixing, refactoring, testing, usability."
+		},
+		{
+			"Role": "Role",
+			"Company": "Company",
+			"Duration": "2015-2016",
+			
+			"Summary": "Summary"
+		},
+		{
+			"Role": "Role",
+			"Company": "Company",
+			"Duration": "2015-2016",
+			
+			"Summary": "Summary"
+		}
+	]
+}

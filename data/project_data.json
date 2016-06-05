@@ -3,8 +3,9 @@
 	[
 		[
 			{
-				"Title": "The Good Dinosaur",
+				"Title": "The Good Dinosaur: Dino Crossing",
 				"Year": "2015",
+				"Company": "CerebralFix",
 				"Environment": "Unity3D",
 				"Languages": "C#",
 				
@@ -15,7 +16,7 @@
 					"The final delivery was of great success with positive reception and feedback; a challenging and rewarding experience alongside an enjoyable product."
 				],
 		
-				"ImageSource": "http://a2.mzstatic.com/nz/r30/Purple69/v4/7d/5a/14/7d5a1459-8902-56ec-b7d3-ba443132cae5/screen322x572.jpeg"
+				"ImageSource": "https://lh3.googleusercontent.com/bMuzvVdy7_0kMxm1nJbbUGkuQ6Ep4r9YT1SxyqJ24MVciPINE_yYp5P1k4UzJw_oGng=h900"
 			},
 			{
 				"Title": "Title",				
@@ -52,19 +53,19 @@
 		],
 		[
 			{
-				"Title": "Title",				
-				"Year": "Year",
-				"Environment": "Environment",
-				"Languages": "Languages",
+				"Title": "Medikidz",	
+				"Company": "Medikidz",
+				"Year": "2014",
+				"Environment": "Unity3D",
+				"Languages": "C#",
 				
 				"Overview":
 				[
-					"Overview1",
-					"Overview2",
-					"Overview3"
+					"A 32 week game production consisting of a team of artists and programmers. This project was in collaboration with Medikidz – a global initiative set up by doctors to explain medical information to children. A fundamental goal of prototyping an education oriented game, the intention of this product was to communicate medicinal areas of knowledge within a gaming medium.",
+					"The primary content were of Medikidz instruction, allowing the team to interpret the supporting elements with modest freedom. Following the initial criteria, the team proceeded into the standard milestones of development. The final delivery was of overall success, a rewarding experience with further industry prospect."
 				],
 		
-				"ImageSource": "assets/images/test.jpg"
+				"ImageSource": "http://www.medikidz.com/gb-en/wp-content/uploads/2014/11/TD17-392x600.jpg"
 			},
 			{
 				"Title": "Title",				
