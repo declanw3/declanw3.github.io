@@ -22,21 +22,21 @@ $(document).ready(function(){
 	});
 	
 	$.ajax({
-		url: "data/profile_data.json",
+		url: "data/resume_data.json",
 		contentType: "application/json;",
 		dataType: "json",
 		success: function(json) {
-			Data.SetProfileData(json);
+			Data.SetResumeData(json);
 			console.log(json);
 			
-			PopulateProfileView();
+			PopulateResumeView();
 		}
 	});
 })
 
 var Data = (function(){
 	var projectData;
-	var profileData;
+	var resumeData;
 	
 	var data = {};	// Public object - returned at end of module
 	
@@ -48,12 +48,12 @@ var Data = (function(){
 		return projectData;
 	}
 	
-	data.SetProfileData = function(_profileData){
-		profileData = _profileData;
+	data.SetResumeData = function(_resumeData){
+		resumeData = _resumeData;
 	}
 	
-	data.GetProfileData = function(){
-		return profileData;
+	data.GetResumeData = function(){
+		return resumeData;
 	}
 	
 	return data;	// Expose externally
@@ -155,22 +155,22 @@ function PopulateProjectNav()
 	$(".project-nav").children().eq(0).addClass("active-nav");
 }
 
-function PopulateProfileView()
+function PopulateResumeView()
 {
-	var profileData = Data.GetProfileData();
+	var resumeData = Data.GetResumeData();
 	
 	// Create HTML work entries dynamically
-	for(var i = 0; i < profileData.work_entries.length - 1; ++i)
+	for(var i = 0; i < resumeData.work_entries.length - 1; ++i)
 	{
 		$(".work-entry").first().clone().appendTo(".work-entry-wrapper");
 	}
 	
-	for(var i = 0; i < profileData.work_entries.length; ++i)
+	for(var i = 0; i < resumeData.work_entries.length; ++i)
 	{
-		$(".work-entry-wrapper").children().eq(i).find(".work-role").append(profileData.work_entries[i].Role);
-		$(".work-entry-wrapper").children().eq(i).find(".work-company").append(profileData.work_entries[i].Company);
-		$(".work-entry-wrapper").children().eq(i).find(".work-duration").append(profileData.work_entries[i].Duration);
-		$(".work-entry-wrapper").children().eq(i).find(".work-summary").append(profileData.work_entries[i].Summary);
+		$(".work-entry-wrapper").children().eq(i).find(".work-role").append(resumeData.work_entries[i].Role);
+		$(".work-entry-wrapper").children().eq(i).find(".work-company").append(resumeData.work_entries[i].Company);
+		$(".work-entry-wrapper").children().eq(i).find(".work-duration").append(resumeData.work_entries[i].Duration);
+		$(".work-entry-wrapper").children().eq(i).find(".work-summary").append(resumeData.work_entries[i].Summary);
 	}
 }
 

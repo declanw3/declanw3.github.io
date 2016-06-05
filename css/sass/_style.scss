@@ -5,6 +5,7 @@
 $page-color: hsla(210, 0%, 0%, 0.8);
 $header-color: hsla(200, 0%, 50%, 0.9);
 $header-alt-color: hsla(200, 0%, 50%, 0.7);
+$header-text-back-color: hsla(200, 0%, 100%, 0.7);
 $core-color: hsla(200, 0%, 30%, 0.9);
 $nav-color: hsla(200, 0%, 20%, 0.5);
 $project-content-color: hsla(200, 0%, 30%, 0.6);
@@ -54,9 +55,33 @@ body
 .header
 {
 	width: 100%;
-	height: 100px;
+	height: auto;
 	
-	background-color: $header-color;
+ 	@include background(linear-gradient(135deg, /* Standard syntax */
+	hsla(200, 100%, 20%, 1.0) 0%, hsla(200, 100%, 20%, 1.0) 10%,		/* Black 	*/
+	hsla(200, 100%, 50%, 1.0) 50%, hsla(200, 100%, 50%, 1.0) 50%, 	/* Blue 1	*/
+	hsla(240, 100%, 0%, 1.0) 50%, hsla(240, 100%, 0%, 1.0) 51%,		/* Black 	*/
+	hsla(200, 100%, 20%, 1.0) 51%, hsla(200, 100%, 20%, 1.0) 61%,	/* Blue 2	*/
+	hsla(240, 100%, 0%, 1.0) 61%, hsla(240, 100%, 0%, 1.0) 62%,		/* Black 	*/
+	hsla(240, 100%, 0%, 1.0) 90%, hsla(240, 100%, 0%, 1.0) 100%));
+}
+
+.header-overlay
+{	
+	height: 100%;
+	
+	@include flex(1);
+	
+	border-color: blue;
+	border-style: solid solid none solid;
+}
+
+.header-main
+{	
+}
+
+.header-sub
+{	
 }
 
 .nav
@@ -101,7 +126,7 @@ body
 	background-color: $nav-color;
 }
 
-.profile-view
+.resume-view
 {
 	@include flex(1);
 	@include flex-flow(column wrap);
