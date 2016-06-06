@@ -9,7 +9,7 @@ $header-text-back-color: hsla(200, 0%, 100%, 0.7);
 $core-color: hsla(200, 0%, 30%, 0.9);
 $nav-color: hsla(200, 0%, 20%, 0.5);
 $project-content-color: hsla(200, 0%, 30%, 0.6);
-$project-component-color: hsla(210, 0%, 0%, 0.7);
+$text-content-color: hsla(210, 0%, 0%, 0.7);
 $button-color: hsla(200, 0%, 40%, 0.6);
 $button-hover-color: hsla(120, 0%, 100%, 1.0);
 
@@ -85,13 +85,13 @@ body
 
 .header-main
 {	
-    text-shadow: 2px 2px $header-color;
+    text-shadow: 2px 2px grey;
 }
 
 .header-sub
 {	
-	color: $core-color;
-    text-shadow: 1px 1px $header-color;
+	color: grey;
+    text-shadow: 1px 1px black;
 }
 
 .nav
@@ -161,6 +161,22 @@ body
 	background-color: $project-content-color;
 }
 
+.text-content
+{
+	background-color: $text-content-color;
+}
+.text-content p, .text-content h1, .text-content h2
+{
+	color: grey;
+}
+
+.profile-content
+{
+	@include flex(1);
+	
+	background-color: $project-content-color;
+}
+
 .work-content
 {	
 	@include flex(1);
@@ -219,8 +235,6 @@ body
 	
 	@include flex(1);
 	@include justify-content(center);
-	
-	background-color: $project-component-color;
 }
 
 .project-image
@@ -235,8 +249,6 @@ body
 	height: 300px;
 	
 	@include flex(1);
-	
-	background-color: $project-component-color;
 }
 .project-details p, .project-details h1
 {
@@ -247,8 +259,6 @@ body
 {
 	width: 100%;
 	height: auto;
-	
-	background-color: $project-component-color;
 }
 .project-summary p
 {
@@ -341,18 +351,6 @@ body
 }
 
 
-
-
-
-.work-entry
-{
-	
-}
-
-.work-entry:nth-child(odd)
-{
-	background-color: $header-alt-color;
-}
 
 .work-entry .work-duration
 {
