@@ -20,13 +20,22 @@
 			<button class="nav-button active-nav">HOME</button>
 			<button class="nav-button">PROJECTS</button>
 			<button class="nav-button">RÉSUMÉ</button>
+			<button class="nav-button">PROFILE</button>
 		</nav>
 		<main class="main flex height-padding" id="main">
 			<div class="home-view flex box-padding">
 				<div class="home-content box-padding">
 					<div class="text-content box-padding">
 						<h1>DECLAN</h1>
-						<p>Welcome to my online portfolio!</p>
+						<h2>
+							Welcome to my online portfolio!
+						</h2>
+						<p>
+							My most recent role as a game developer has provided me with the necessary skills to operate within various development teams, adopting industry standards and procedures in producing high quality software. I am a recent graduate seeking work in the software engineering industry, looking to constantly improve and refine my abilities.
+						</p>
+						<p>
+							I am extremely passionate in the field of development, and have experience in a range of outputs including games, tools, and frameworks. I look forward to applying these skills within a business environment and hope to create applications of polished quality. Throughout my career and future employment, I have strong aspirations in advancing toward higher end development of design and infrastructure.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -67,10 +76,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="resume-view flex box-padding">
+			<div class="resume-view flex box-padding" ng-app="myApp" ng-controller="resumeCtrl">
 				<div class="profile-content box-padding height-margin">
 					<h1>TECHNICAL</h1>
-					<div class="text-content box-padding" ng-app="myApp" ng-controller="technicalCtrl">
+					<div class="text-content box-padding">
 						<table class="technical-content">
 							<tr ng-repeat="x in skills">
 								<td>{{ x.Area }}</td>
@@ -96,6 +105,28 @@
 				</div>
 				<div class="profile-content box-padding height-margin">
 					<h1>EDUCATION</h1>
+					<div class="text-content box-padding">
+						<table class="education-content">
+							<tr ng-repeat="x in education">
+								<td>{{ x.Degree }}</td>
+								<td>{{ x.Provider }}</td>
+								<td>{{ x.Duration }}</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="profile-view flex box-padding">
+				<div class="profile-content box-padding">
+					<div class="text-content box-padding">
+						<h1>PROFILE</h1>
+						<h2>
+						</h2>
+						<p>
+						</p>
+						<p>
+						</p>
+					</div>
 				</div>
 			</div>
 		</main>

@@ -41,16 +41,16 @@
 				"Year": "2016",
 				"Company": "-",
 				"Environment": "-",
-				"Languages": "HTML, CSS (Sass, Compass), JavaScript (jQuery)",
+				"Languages": "HTML, CSS, SCSS, JavaScript, jQuery, AngularJS",
 				
 				"Overview":
 				[
 					"Having no initial exposure to web development technologies, this website was aimed to learn the core languages while producing a functional product as a supporting investment. By allocating one week to learn the basics; HTML, CSS and JavaScript were understood to a comfortable level.",
-					"Timeboxing the website for a feature complete deliverable within two weeks was a reasonable goal of size and scope. Very little disruptions effected the project, conversely, adopting new frameworks (in this case jQuery and Sass) assisted production significantly. Polish, aesthetic and behaviour are a work in progress, prioritising the functional and navigational elements.",
+					"Timeboxing the website for a feature complete deliverable within two weeks was a reasonable goal of size and scope. Very little disruptions effected the project, conversely, adopting new frameworks (in this case jQuery and SCSS) assisted production significantly. Polish, aesthetic and behaviour are a work in progress, prioritising the functional and navigational elements.",
 					"Exploring new areas in web development technologies, AngularJS was definitely something to look at in parallel with the website. Improvements to this project include structure, further cross browser considerations and dynamic sizing/layout."
 				],
 		
-				"ImageSource": "assets/images/test.jpg"
+				"ImageSource": "https://d13yacurqjgara.cloudfront.net/users/32742/screenshots/1009938/files-html_-css_-php_-js.jpg"
 			}
 		],
 		[

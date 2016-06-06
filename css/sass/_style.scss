@@ -80,12 +80,15 @@ body
 	hsla(200, 100%, 0%, 1.0) 0%, hsla(200, 100%, 0%, 1.0) 0%,
 	hsla(200, 100%, 100%, 1.0) 0%, hsla(200, 100%, 100%, 1.0) 50%,
 	hsla(240, 100%, 0%, 1.0) 50%, hsla(240, 100%, 0%, 1.0) 51%,
-	hsla(200, 100%, 0%, 0.5) 51%, hsla(200, 100%, 0%, 0.5) 100%));
+	hsla(240, 100%, 100%, 1.0) 51%, hsla(240, 100%, 100%, 1.0) 54%,
+	hsla(240, 100%, 0%, 1.0) 54%, hsla(240, 100%, 0%, 1.0) 55%,
+	hsla(200, 100%, 0%, 0.5) 55%, hsla(200, 100%, 0%, 0.5) 100%));
 }
 
 .header-main
 {	
     text-shadow: 2px 2px grey;
+	text-decoration: underline;
 }
 
 .header-sub
@@ -184,6 +187,22 @@ body
 .technical-content td
 {
 	padding: 0px 10px;
+}
+
+.education-content
+{
+	width: 100%;
+	color: grey;
+}
+.education-content td
+{
+	padding: 0px 10px;
+	white-space: nowrap;
+}
+.education-content td:last-child
+{
+	width: 100%;
+	text-align: right;
 }
 
 .work-content
