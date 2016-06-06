@@ -20,7 +20,6 @@ html
 
 body
 {		
-	background-color: black;
 	
  	@include background(linear-gradient(45deg,
 	hsla(200, 50%, 0%, 1.0) 0%, hsla(200, 50%, 0%, 1.0) 0%,
@@ -36,6 +35,7 @@ body
 	
     background-repeat: no-repeat;
     background-attachment: fixed;
+	background-color: black;
 	
 	font-family: calibri;
 }
@@ -175,6 +175,15 @@ body
 	@include flex(1);
 	
 	background-color: $project-content-color;
+}
+
+.technical-content
+{
+	color: grey;
+}
+.technical-content td
+{
+	padding: 0px 10px;
 }
 
 .work-content

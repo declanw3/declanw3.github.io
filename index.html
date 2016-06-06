@@ -5,8 +5,10 @@
 	<meta charset="UTF-8"> 
 	<link rel="stylesheet" href="css/css/main.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-	<script type="text/javascript" src="js/populateProject.js"></script> 
-<body>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script type="text/javascript" src="js/populateProject.js"></script>
+	<script type="text/javascript" src="js/populateTechnical.js"></script>
+<body>	
 	<div class="page flex box-padding">
 		<header class="header flex height-margin">
 			<div class="header-overlay1 box-margin">
@@ -68,8 +70,13 @@
 			<div class="resume-view flex box-padding">
 				<div class="profile-content box-padding height-margin">
 					<h1>TECHNICAL</h1>
-					<div class="text-content box-padding">
-						<p></p>
+					<div class="text-content box-padding" ng-app="myApp" ng-controller="technicalCtrl">
+						<table class="technical-content">
+							<tr ng-repeat="x in skills">
+								<td>{{ x.Area }}</td>
+								<td>{{ x.Skills }}</td>
+							</tr>
+						</table>
 					</div>
 				</div>
 				<div class="profile-content box-padding height-margin">

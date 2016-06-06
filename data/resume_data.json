@@ -1,4 +1,31 @@
 {
+	"technical_skills":
+	[
+		{
+			"Area": "Programming languages",
+			"Skills": "C++, C, C#, Lua, Python"
+		},
+		{
+			"Area": "Web development",
+			"Skills": "HTML, CSS, JavaScript, TypeScript, jQuery"
+		},
+		{
+			"Area": "Version control",
+			"Skills": "Git, SVN"
+		},
+		{
+			"Area": "Networking",
+			"Skills": "Winsock"
+		},
+		{
+			"Area": "Database",
+			"Skills": "SQL"
+		},
+		{
+			"Area": "Project management",
+			"Skills": "JIRA, Hansoft"
+		}
+	],
 	"work_entries":
 	[
 		{
