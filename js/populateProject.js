@@ -130,6 +130,15 @@ function PopulateProjectView()
 	$(".project-languages").empty();
 	$(".project-languages").append(projectData.Languages);
 	
+	
+	$(".project-link").empty();
+	$(".project-link").attr("href", "");
+	if(projectData.Link !== "")
+	{
+		$(".project-link").append(projectData.Title);
+		$(".project-link").attr("href", projectData.Link);
+	}
+	
 	$(".project-summary").empty();
 	for(var i = 0; i < projectData.Overview.length; ++i)
 	{
