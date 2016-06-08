@@ -35,6 +35,25 @@
 				],
 		
 				"ImageSource": "https://unity3d.com/profiles/unity3d/themes/unity/images/company/brand/logos/primary/unity-logo-white.png"
+			}
+		],
+		[
+			{
+				"Title": "Personal online portfolio",				
+				"Year": "2016",
+				"Company": "",
+				"Environment": "",
+				"Languages": "HTML, CSS, SCSS, JavaScript, jQuery, AngularJS",
+				"Link": "",
+				
+				"Overview":
+				[
+					"Having no initial exposure to web development technologies, this website was aimed to learn the core languages while producing a functional product to support. By allocating one week to learn the basics; HTML, CSS and JavaScript were understood to a comfortable level.",
+					"Timeboxing the website for a feature complete deliverable within two weeks was a reasonable goal of size and scope. Very little disruptions effected the project, conversely, adopting new frameworks (in this case jQuery and SCSS) assisted production significantly. Polish, aesthetic and behaviour are a work in progress, prioritising the functional and navigational elements.",
+					"Exploring new areas in web development technologies, AngularJS was definitely something to look at in parallel with the website. Improvements to this project include structure, further cross browser considerations and dynamic sizing/layout."
+				],
+		
+				"ImageSource": "https://d13yacurqjgara.cloudfront.net/users/32742/screenshots/1009938/files-html_-css_-php_-js.jpg"
 			},
 			{
 				"Title": "Title",				
@@ -52,25 +71,6 @@
 				],
 		
 				"ImageSource": "assets/images/test.jpg"
-			}
-		],
-		[
-			{
-				"Title": "Personal online portfolio",				
-				"Year": "2016",
-				"Company": "",
-				"Environment": "",
-				"Languages": "HTML, CSS, SCSS, JavaScript, jQuery, AngularJS",
-				"Link": "",
-				
-				"Overview":
-				[
-					"Having no initial exposure to web development technologies, this website was aimed to learn the core languages while producing a functional product as a supporting investment. By allocating one week to learn the basics; HTML, CSS and JavaScript were understood to a comfortable level.",
-					"Timeboxing the website for a feature complete deliverable within two weeks was a reasonable goal of size and scope. Very little disruptions effected the project, conversely, adopting new frameworks (in this case jQuery and SCSS) assisted production significantly. Polish, aesthetic and behaviour are a work in progress, prioritising the functional and navigational elements.",
-					"Exploring new areas in web development technologies, AngularJS was definitely something to look at in parallel with the website. Improvements to this project include structure, further cross browser considerations and dynamic sizing/layout."
-				],
-		
-				"ImageSource": "https://d13yacurqjgara.cloudfront.net/users/32742/screenshots/1009938/files-html_-css_-php_-js.jpg"
 			}
 		],
 		[

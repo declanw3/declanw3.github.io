@@ -1,6 +1,7 @@
 @import "compass/css3/flexbox";
 @import "compass/css3/images";
 @import "compass/css3/transition";
+@import "compass/css3/text-shadow";
 
 $page-color: hsla(210, 0%, 0%, 0.8);
 $header-color: hsla(200, 0%, 50%, 0.9);
@@ -78,7 +79,7 @@ body
 	
  	@include background(linear-gradient(135deg,
 	hsla(200, 100%, 0%, 1.0) 0%, hsla(200, 100%, 0%, 1.0) 0%,
-	hsla(200, 20%, 40%, 1.0) 0%, hsla(200, 20%, 50%, 1.0) 50%,
+	hsla(200, 20%, 20%, 1.0) 0%, hsla(200, 20%, 50%, 1.0) 50%,
 	hsla(240, 100%, 0%, 1.0) 50%, hsla(240, 100%, 0%, 1.0) 51%,
 	hsla(240, 100%, 100%, 1.0) 51%, hsla(240, 100%, 100%, 1.0) 54%,
 	hsla(240, 100%, 0%, 1.0) 54%, hsla(240, 100%, 0%, 1.0) 55%,
@@ -87,14 +88,14 @@ body
 
 .header-main
 {	
-	color: hsla(240, 0%, 15%, 1.0);
-    text-shadow: 2px 2px 0.5px black;
+	color: hsla(240, 0%, 70%, 1.0);
+    @include text-shadow(rgba(black, 1.0) 3px 3px 2px);
 }
 
 .header-sub
 {	
-	color: hsla(240, 0%, 60%, 1.0);
-    text-shadow: 2px 2px 2px black;
+	color: hsla(240, 0%, 50%, 1.0);
+    @include text-shadow(rgba(black, 1.0) 2px 2px 1px);
 }
 
 .nav
@@ -418,4 +419,14 @@ body
 .box-margin
 {
 	margin: 10px 10px 10px 10px;
+}
+
+a:link {
+    color: hsla(200, 50%, 50%, 1.0);
+}
+a:visited {
+    color: hsla(200, 50%, 25%, 1.0);
+}
+a:hover, a:active {
+    color: white;
 }

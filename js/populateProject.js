@@ -3,13 +3,25 @@ $(document).ready(function(){
 		$(this).hide();
 	});
 	DisplayView(0);
-
+	
+    /* Preload code goes here */
 	$.ajax({
 		url: "data/project_data.json",
 		contentType: "application/json;",
 		dataType: "json",
 		success: function(json) {
 			Data.SetProjectData(json);
+			
+			/* images is an array with image metadata */
+			var imgSrc = [];
+			for(var i = 0; i < Data.GetProjectData().projects.length; ++i)
+			{
+				for(var j = 0; j < Data.GetProjectData().projects[i].length; ++j)
+				{
+					imgSrc.push(Data.GetProjectData().projects[i][j].ImageSource);
+				}
+			}
+			PreloadImages(imgSrc, 0);
 			
 			PopulateProjectView();
 			PopulateProjectNav();
@@ -33,6 +45,18 @@ $(document).ready(function(){
 		}
 	});
 })
+
+function PreloadImages(imgSrc, index) {
+	index = index || 0;
+	if(imgSrc && imgSrc.length > index) 
+	{
+		var img = new Image ();
+		img.onload = function() {
+			preload(imgSrc, index + 1);
+		}
+		img.src = imgSrc[index];
+	}
+}
 
 var Data = (function(){
 	var projectData;
