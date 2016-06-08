@@ -78,7 +78,7 @@ body
 	
  	@include background(linear-gradient(135deg,
 	hsla(200, 100%, 0%, 1.0) 0%, hsla(200, 100%, 0%, 1.0) 0%,
-	hsla(200, 20%, 5%, 1.0) 0%, hsla(200, 20%, 10%, 1.0) 50%,
+	hsla(200, 20%, 40%, 1.0) 0%, hsla(200, 20%, 50%, 1.0) 50%,
 	hsla(240, 100%, 0%, 1.0) 50%, hsla(240, 100%, 0%, 1.0) 51%,
 	hsla(240, 100%, 100%, 1.0) 51%, hsla(240, 100%, 100%, 1.0) 54%,
 	hsla(240, 100%, 0%, 1.0) 54%, hsla(240, 100%, 0%, 1.0) 55%,
@@ -87,15 +87,14 @@ body
 
 .header-main
 {	
-	color: white;
-	
-    text-shadow: 3px 3px black;
+	color: hsla(240, 0%, 15%, 1.0);
+    text-shadow: 2px 2px 0.5px black;
 }
 
 .header-sub
 {	
-	color: grey;
-    text-shadow: 2px 2px black;
+	color: hsla(240, 0%, 60%, 1.0);
+    text-shadow: 2px 2px 2px black;
 }
 
 .nav
