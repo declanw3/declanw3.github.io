@@ -52,7 +52,7 @@ function PreloadImages(imgSrc, index) {
 	{
 		var img = new Image ();
 		img.onload = function() {
-			preload(imgSrc, index + 1);
+			PreloadImages(imgSrc, index + 1);
 		}
 		img.src = imgSrc[index];
 	}

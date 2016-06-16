@@ -22,19 +22,16 @@
 			<button class="nav-button">RÉSUMÉ</button>
 			<button class="nav-button">PROFILE</button>
 		</nav>
-		<main class="main flex height-padding" id="main">
+		<main class="main flex height-padding" id="main" ng-app="myApp" ng-controller="mainCtrl">
 			<div class="home-view flex box-padding">
 				<div class="home-content box-padding">
 					<div class="text-content box-padding">
 						<h2>
-							Welcome to my online portfolio!
+							{{home_heading}}
 						</h2>
-						<p>
-							My most recent role as a game developer has provided me with the necessary skills to operate within various development teams, adopting industry standards and procedures in producing high quality software. I am a recent graduate seeking work in the software engineering industry, looking to constantly improve and refine my abilities.
-						</p>
-						<p>
-							I am extremely passionate in the field of development, and have experience in a range of outputs including games, tools, and frameworks. I look forward to applying these skills within a business environment and hope to create applications of polished quality.
-						</p>
+						<div ng-repeat="x in home_body">
+							<p>{{ x }}</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -82,7 +79,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="resume-view flex box-padding" ng-app="myApp" ng-controller="resumeCtrl">
+			<div class="resume-view flex box-padding">
 				<div class="profile-content box-padding height-margin">
 					<h1>TECHNICAL</h1>
 					<div class="text-content box-padding">
@@ -123,15 +120,34 @@
 				</div>
 			</div>
 			<div class="profile-view flex box-padding">
-				<div class="profile-content box-padding">
+				<div class="profile-content box-padding height-margin">
+					<h1>INTERESTS AND HOBBIES</h1>
 					<div class="text-content box-padding">
-						<h1>PROFILE</h1>
-						<h2>
-						</h2>
-						<p>
-						</p>
-						<p>
-						</p>
+						<div ng-repeat="x in interests">
+							<p>{{ x }}</p>
+						</div>
+					</div>
+				</div>
+				<div class="profile-content box-padding height-margin">
+					<h1>VOLUNTARY ACTIVITIES</h1>
+					<div class="text-content box-padding">
+						<table class="technical-content">
+							<tr ng-repeat="x in voluntary">
+								<td>{{ x.Activity }}</td>
+								<td>{{ x.Description }}</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="profile-content box-padding height-margin">
+					<h1>ADDITIONAL INFORMATION</h1>
+					<div class="text-content box-padding">
+						<table class="technical-content">
+							<tr ng-repeat="x in additional">
+								<td>{{ x.Job }}</td>
+								<td>{{ x.Location }}</td>
+							</tr>
+						</table>
 					</div>
 				</div>
 			</div>

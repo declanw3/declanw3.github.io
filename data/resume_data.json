@@ -2,8 +2,16 @@
 	"technical_skills":
 	[
 		{
+			"Area": "Development environments",
+			"Skills": "Unity3D, Phaser, Visual Studio"
+		},
+		{
 			"Area": "Programming languages",
 			"Skills": "C++, C, C#, Python, Lua"
+		},
+		{
+			"Area": "Production tools/services",
+			"Skills": "Node.js (npm), GoCD, Jenkins, AWS"
 		},
 		{
 			"Area": "Web development",

@@ -88,13 +88,14 @@ body
 
 .header-main
 {	
-	color: hsla(240, 0%, 80%, 1.0);
+    font-size: 3em;
+	color: hsla(240, 0%, 90%, 1.0);
     @include text-shadow(rgba(black, 1.0) 2px 2px 1px);
 }
 
 .header-sub
 {	
-	color: hsla(240, 0%, 50%, 1.0);
+	color: hsla(240, 0%, 60%, 1.0);
     @include text-shadow(rgba(black, 1.0) 2px 2px 1px);
 }
 
@@ -151,6 +152,14 @@ body
 }
 
 .resume-view
+{
+	@include flex(1);
+	@include flex-flow(column wrap);
+	
+	background-color: $nav-color;
+}
+
+.profile-view
 {
 	@include flex(1);
 	@include flex-flow(column wrap);
