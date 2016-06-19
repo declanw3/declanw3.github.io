@@ -1,28 +1,32 @@
 {
 	"interests_and_hobbies": 
 	[
-		"Enthusiastic in areas involving digital medium, personal interests range from programming to gaming, TV and music. Extracurricular leisure also include tennis, table tennis, exercise, and recent excursions in SCUBA diving."
+		"Enthusiastic in areas involving digital medium, personal interests range from programming to gaming, TV and music. Extracurricular leisure also include tennis, ultimate Frisbee, exercise, and recent excursions in SCUBA diving."
 	],
 	"voluntary_activities":
 	[
 		{
 			"Activity": "General Animal Care",
-			"Description": "SPCA (Cantebury)"
+			"Description": "SPCA (Cantebury)",
+			"Duration": "2015" 
 		},
 		{
 			"Activity": "Communal Planting",
-			"Description": "Conservation Volunteers New Zealand (CVNZ) (Auckland)"
+			"Description": "Conservation Volunteers New Zealand (CVNZ) (Auckland)",
+			"Duration": "2016" 
 		}
 	],
 	"additional_information":
 	[
 		{
 			"Job": "Checkout Operator",
-			"Location": "Pak ‘n’ Save (Glen Innes, Auckland)"
+			"Location": "Pak ‘n’ Save (Glen Innes, Auckland)",
+			"Duration": "2009-2011" 
 		},
 		{
 			"Job": "Warehouse Assistant",
-			"Location": "Jasons (Penrose, Auckland)"
+			"Location": "Jasons (Penrose, Auckland)",
+			"Duration": "2012" 
 		}
 	]
 }

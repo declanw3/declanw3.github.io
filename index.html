@@ -131,10 +131,11 @@
 				<div class="profile-content box-padding height-margin">
 					<h1>VOLUNTARY ACTIVITIES</h1>
 					<div class="text-content box-padding">
-						<table class="technical-content">
+						<table class="education-content">
 							<tr ng-repeat="x in voluntary">
 								<td>{{ x.Activity }}</td>
 								<td>{{ x.Description }}</td>
+								<td>{{ x.Duration }}</td>
 							</tr>
 						</table>
 					</div>
@@ -142,10 +143,11 @@
 				<div class="profile-content box-padding height-margin">
 					<h1>ADDITIONAL INFORMATION</h1>
 					<div class="text-content box-padding">
-						<table class="technical-content">
+						<table class="education-content">
 							<tr ng-repeat="x in additional">
 								<td>{{ x.Job }}</td>
 								<td>{{ x.Location }}</td>
+								<td>{{ x.Duration }}</td>
 							</tr>
 						</table>
 					</div>
