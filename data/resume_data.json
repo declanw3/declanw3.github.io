@@ -3,7 +3,7 @@
 	[
 		{
 			"Area": "Development environments",
-			"Skills": "Unity3D, Phaser, Visual Studio, Android SDK"
+			"Skills": "Visual Studio, Android SDK, Unity3D, Phaser"
 		},
 		{
 			"Area": "Programming languages",
@@ -11,15 +11,15 @@
 		},
 		{
 			"Area": "Production tools/services",
-			"Skills": "Node.js (npm), GoCD, Jenkins, AWS"
+			"Skills": "AWS, Node.js (npm), GoCD, Jenkins"
 		},
 		{
 			"Area": "Web development",
 			"Skills": "HTML, CSS, SCSS, JavaScript, jQuery, TypeScript"
 		},
 		{
-			"Area": "Version control",
-			"Skills": "Git, SVN"
+			"Area": "Version control and repository",
+			"Skills": "Git, SVN, Bitbucket, GitHub"
 		},
 		{
 			"Area": "Networking",
