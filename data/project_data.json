@@ -39,6 +39,23 @@
 		],
 		[
 			{
+				"Title": "Colourfall",				
+				"Year": "2016",
+				"Company": "",
+				"Environment": "Android SDK",
+				"Languages": "Java, XML",
+				"Link": "",
+				
+				"Overview":
+				[
+					"A passion for exploring new technologies, personal motivation was directed at exploring the tools involved with professional and scalable apps, in particular Android SDK. A 2-week application development project aimed at learning the core elements of Android SDK, the final product: a colour palette generator and visualiser.",
+					"Fundamental basics such as Layout, Views/ViewGroups, Activities, Resources, and Project Structure were all covered to a comfortable understanding. A pivotal moment within the project was understanding the concept of MVC structure. Being able to separate logic into 3 principal states allowed for clean communication across the app, a rewarding experience to led by improved understanding.",
+					"Overall, this project was a small yet valuable spike in knowledge, alongside practical output for personal benefit."
+				],
+		
+				"ImageSource": "assets/images/colourfall.png"
+			},
+			{
 				"Title": "Personal online portfolio",				
 				"Year": "2016",
 				"Company": "",
