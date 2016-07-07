@@ -6,27 +6,32 @@
 	"voluntary_activities":
 	[
 		{
+			"Activity": "Communal Planting",
+			"Description": "Conservation Volunteers New Zealand (CVNZ) (Auckland)",
+			"Duration": "2016" 
+		},
+		{
 			"Activity": "General Animal Care",
 			"Description": "SPCA (Cantebury)",
 			"Duration": "2015" 
 		},
 		{
-			"Activity": "Communal Planting",
-			"Description": "Conservation Volunteers New Zealand (CVNZ) (Auckland)",
-			"Duration": "2016" 
+			"Activity": "Video Operator",
+			"Description": "Auckland Chinese Community Centre Chinese",
+			"Duration": "2010" 
 		}
 	],
 	"additional_information":
 	[
 		{
-			"Job": "Checkout Operator",
-			"Location": "Pak ‘n’ Save (Glen Innes, Auckland)",
-			"Duration": "2009-2011" 
-		},
-		{
 			"Job": "Warehouse Assistant",
 			"Location": "Jasons (Penrose, Auckland)",
 			"Duration": "2012" 
+		},
+		{
+			"Job": "Checkout Operator",
+			"Location": "Pak ‘n’ Save (Glen Innes, Auckland)",
+			"Duration": "2009-2011" 
 		}
 	]
 }
